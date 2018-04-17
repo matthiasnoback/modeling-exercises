@@ -113,3 +113,13 @@ it('does not let quantity remaining to be delivered go over the initially ordere
     (new SalesOrderLine(12.5))->undoDelivery(15.0)->getQuantityOpen() === 12.5
 );
 done();
+
+/*
+ * Design issues that should be fixed by introducing value objects:
+ *
+ * - Dealing with "quantity precision" (i.e. number of decimals taken into account).
+ * Preventing "quantity so far delivered" to end up being less than 0.
+ * Preventing "quantity open" to end up being more than "quantity initially ordered".
+ *
+ * Question: what is the relation between these different quantities? Which ones do we need to "remember" (i.e. store in a database, etc.), which ones can we derive?
+ */
