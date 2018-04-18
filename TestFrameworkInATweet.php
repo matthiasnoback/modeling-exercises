@@ -1,8 +1,9 @@
 <?php
 
 /*
- * The test framework
+ * Source: https://gist.github.com/mathiasverraes/9046427
  */
+
 function it($m, $p)
 {
     echo "\033[" . ($p ? "32m✔" : "31m✘") . " It $m\033[0m\n";
