@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/test.php';
+require __DIR__ . '/TestFrameworkInATweet.php';
 
 class SalesOrderLine
 {
